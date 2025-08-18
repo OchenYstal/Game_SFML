@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/ystal/Game_SFML/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

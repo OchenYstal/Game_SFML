@@ -1,0 +1,3 @@
+/home/ystal/Game_SFML/build/CMakeFiles/MyGame.dir
+/home/ystal/Game_SFML/build/CMakeFiles/edit_cache.dir
+/home/ystal/Game_SFML/build/CMakeFiles/rebuild_cache.dir
