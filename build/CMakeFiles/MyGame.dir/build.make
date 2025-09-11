@@ -86,18 +86,66 @@ CMakeFiles/MyGame.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyGame.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ystal/Game_SFML/src/main.cpp -o CMakeFiles/MyGame.dir/src/main.cpp.s
 
+CMakeFiles/MyGame.dir/src/Enemy.cpp.o: CMakeFiles/MyGame.dir/flags.make
+CMakeFiles/MyGame.dir/src/Enemy.cpp.o: /home/ystal/Game_SFML/src/Enemy.cpp
+CMakeFiles/MyGame.dir/src/Enemy.cpp.o: CMakeFiles/MyGame.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ystal/Game_SFML/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MyGame.dir/src/Enemy.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyGame.dir/src/Enemy.cpp.o -MF CMakeFiles/MyGame.dir/src/Enemy.cpp.o.d -o CMakeFiles/MyGame.dir/src/Enemy.cpp.o -c /home/ystal/Game_SFML/src/Enemy.cpp
+
+CMakeFiles/MyGame.dir/src/Enemy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyGame.dir/src/Enemy.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ystal/Game_SFML/src/Enemy.cpp > CMakeFiles/MyGame.dir/src/Enemy.cpp.i
+
+CMakeFiles/MyGame.dir/src/Enemy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyGame.dir/src/Enemy.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ystal/Game_SFML/src/Enemy.cpp -o CMakeFiles/MyGame.dir/src/Enemy.cpp.s
+
+CMakeFiles/MyGame.dir/src/Math.cpp.o: CMakeFiles/MyGame.dir/flags.make
+CMakeFiles/MyGame.dir/src/Math.cpp.o: /home/ystal/Game_SFML/src/Math.cpp
+CMakeFiles/MyGame.dir/src/Math.cpp.o: CMakeFiles/MyGame.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ystal/Game_SFML/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MyGame.dir/src/Math.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyGame.dir/src/Math.cpp.o -MF CMakeFiles/MyGame.dir/src/Math.cpp.o.d -o CMakeFiles/MyGame.dir/src/Math.cpp.o -c /home/ystal/Game_SFML/src/Math.cpp
+
+CMakeFiles/MyGame.dir/src/Math.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyGame.dir/src/Math.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ystal/Game_SFML/src/Math.cpp > CMakeFiles/MyGame.dir/src/Math.cpp.i
+
+CMakeFiles/MyGame.dir/src/Math.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyGame.dir/src/Math.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ystal/Game_SFML/src/Math.cpp -o CMakeFiles/MyGame.dir/src/Math.cpp.s
+
+CMakeFiles/MyGame.dir/src/Player.cpp.o: CMakeFiles/MyGame.dir/flags.make
+CMakeFiles/MyGame.dir/src/Player.cpp.o: /home/ystal/Game_SFML/src/Player.cpp
+CMakeFiles/MyGame.dir/src/Player.cpp.o: CMakeFiles/MyGame.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ystal/Game_SFML/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MyGame.dir/src/Player.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyGame.dir/src/Player.cpp.o -MF CMakeFiles/MyGame.dir/src/Player.cpp.o.d -o CMakeFiles/MyGame.dir/src/Player.cpp.o -c /home/ystal/Game_SFML/src/Player.cpp
+
+CMakeFiles/MyGame.dir/src/Player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyGame.dir/src/Player.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ystal/Game_SFML/src/Player.cpp > CMakeFiles/MyGame.dir/src/Player.cpp.i
+
+CMakeFiles/MyGame.dir/src/Player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyGame.dir/src/Player.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ystal/Game_SFML/src/Player.cpp -o CMakeFiles/MyGame.dir/src/Player.cpp.s
+
 # Object files for target MyGame
 MyGame_OBJECTS = \
-"CMakeFiles/MyGame.dir/src/main.cpp.o"
+"CMakeFiles/MyGame.dir/src/main.cpp.o" \
+"CMakeFiles/MyGame.dir/src/Enemy.cpp.o" \
+"CMakeFiles/MyGame.dir/src/Math.cpp.o" \
+"CMakeFiles/MyGame.dir/src/Player.cpp.o"
 
 # External object files for target MyGame
 MyGame_EXTERNAL_OBJECTS =
 
 MyGame: CMakeFiles/MyGame.dir/src/main.cpp.o
+MyGame: CMakeFiles/MyGame.dir/src/Enemy.cpp.o
+MyGame: CMakeFiles/MyGame.dir/src/Math.cpp.o
+MyGame: CMakeFiles/MyGame.dir/src/Player.cpp.o
 MyGame: CMakeFiles/MyGame.dir/build.make
 MyGame: CMakeFiles/MyGame.dir/compiler_depend.ts
 MyGame: CMakeFiles/MyGame.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ystal/Game_SFML/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable MyGame"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ystal/Game_SFML/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable MyGame"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MyGame.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

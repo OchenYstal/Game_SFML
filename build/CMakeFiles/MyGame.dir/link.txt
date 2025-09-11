@@ -1,1 +1,1 @@
-/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/MyGame.dir/link.d CMakeFiles/MyGame.dir/src/main.cpp.o -o MyGame  -lsfml-system -lsfml-window -lsfml-graphics -lsfml-audio
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/MyGame.dir/link.d CMakeFiles/MyGame.dir/src/main.cpp.o CMakeFiles/MyGame.dir/src/Enemy.cpp.o CMakeFiles/MyGame.dir/src/Math.cpp.o CMakeFiles/MyGame.dir/src/Player.cpp.o -o MyGame  -lsfml-system -lsfml-window -lsfml-graphics -lsfml-audio

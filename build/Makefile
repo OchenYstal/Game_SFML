@@ -129,6 +129,78 @@ MyGame/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyGame.dir/build.make CMakeFiles/MyGame.dir/build
 .PHONY : MyGame/fast
 
+src/Enemy.o: src/Enemy.cpp.o
+.PHONY : src/Enemy.o
+
+# target to build an object file
+src/Enemy.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyGame.dir/build.make CMakeFiles/MyGame.dir/src/Enemy.cpp.o
+.PHONY : src/Enemy.cpp.o
+
+src/Enemy.i: src/Enemy.cpp.i
+.PHONY : src/Enemy.i
+
+# target to preprocess a source file
+src/Enemy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyGame.dir/build.make CMakeFiles/MyGame.dir/src/Enemy.cpp.i
+.PHONY : src/Enemy.cpp.i
+
+src/Enemy.s: src/Enemy.cpp.s
+.PHONY : src/Enemy.s
+
+# target to generate assembly for a file
+src/Enemy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyGame.dir/build.make CMakeFiles/MyGame.dir/src/Enemy.cpp.s
+.PHONY : src/Enemy.cpp.s
+
+src/Math.o: src/Math.cpp.o
+.PHONY : src/Math.o
+
+# target to build an object file
+src/Math.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyGame.dir/build.make CMakeFiles/MyGame.dir/src/Math.cpp.o
+.PHONY : src/Math.cpp.o
+
+src/Math.i: src/Math.cpp.i
+.PHONY : src/Math.i
+
+# target to preprocess a source file
+src/Math.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyGame.dir/build.make CMakeFiles/MyGame.dir/src/Math.cpp.i
+.PHONY : src/Math.cpp.i
+
+src/Math.s: src/Math.cpp.s
+.PHONY : src/Math.s
+
+# target to generate assembly for a file
+src/Math.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyGame.dir/build.make CMakeFiles/MyGame.dir/src/Math.cpp.s
+.PHONY : src/Math.cpp.s
+
+src/Player.o: src/Player.cpp.o
+.PHONY : src/Player.o
+
+# target to build an object file
+src/Player.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyGame.dir/build.make CMakeFiles/MyGame.dir/src/Player.cpp.o
+.PHONY : src/Player.cpp.o
+
+src/Player.i: src/Player.cpp.i
+.PHONY : src/Player.i
+
+# target to preprocess a source file
+src/Player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyGame.dir/build.make CMakeFiles/MyGame.dir/src/Player.cpp.i
+.PHONY : src/Player.cpp.i
+
+src/Player.s: src/Player.cpp.s
+.PHONY : src/Player.s
+
+# target to generate assembly for a file
+src/Player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyGame.dir/build.make CMakeFiles/MyGame.dir/src/Player.cpp.s
+.PHONY : src/Player.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -162,6 +234,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... MyGame"
+	@echo "... src/Enemy.o"
+	@echo "... src/Enemy.i"
+	@echo "... src/Enemy.s"
+	@echo "... src/Math.o"
+	@echo "... src/Math.i"
+	@echo "... src/Math.s"
+	@echo "... src/Player.o"
+	@echo "... src/Player.i"
+	@echo "... src/Player.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
