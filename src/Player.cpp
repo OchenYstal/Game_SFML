@@ -14,10 +14,15 @@ void Player::Load()
  if (!texture.loadFromFile("assets/Player/Textures/spritesheet.png"))
     {
         std::cout << "Player image failed to loaded!" << std::endl;
-        
+         int XIndex = 1;
+         int YIndex = 0;
+         sf::Sprite sprite(texture);
+         sprite.setScale({2.f, 2.f});
+         sprite.scale({0.8f, 0.8f});
+         sprite.setTextureRect(sf::IntRect({XIndex * 64, YIndex * 64}, {64, 64}));
     }
    
-    sf::Sprite sprite(texture);
+    
     
 }
 void Player::Update(Enemy& enemy)
