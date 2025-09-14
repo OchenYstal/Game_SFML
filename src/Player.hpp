@@ -1,11 +1,15 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include <SFML/Graphics/RectangleShape.hpp>
+#include <SFML/Graphics/RenderTexture.hpp>
 #include "Enemy.hpp"
 
 class Player
 {
     private:
     sf::Texture texture;
+    sf::RectangleShape boundRectangle;
+    sf::Vector2i size;
 
     std::vector<sf::RectangleShape> bullets;
     float bulletSpeed = 0.2f;
