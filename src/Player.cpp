@@ -61,6 +61,12 @@ sf::Vector2f position = sprite.getPosition();
             bullets[i].setPosition(bullets[i].getPosition() + bulletDirection * bulletSpeed);
          }
          boundRectangle.setPosition(sprite.getPosition());
+
+
+         if(Math::DidRectCollide(sprite.getGlobalBounds(), enemy.sprite.getGlobalBounds()))
+         {
+            std::cout << "Collision" << std::endl;
+         }
 }
 void Player::Draw(sf::RenderWindow& window)
 {
