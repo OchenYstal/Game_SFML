@@ -26,7 +26,7 @@ void Enemy::Load()
     sprite.setTextureRect(sf::IntRect({xIndex * size.x, yIndex * size.y}, {size.x, size.y}));
     boundRectangle.setSize(sf::Vector2f (size.x * sprite.getScale().x, size.y * sprite.getScale().y));  
 }
-void Enemy::Update()
+void Enemy::Update(float DeltaTime)
 {
     boundRectangle.setPosition(sprite.getPosition());
 

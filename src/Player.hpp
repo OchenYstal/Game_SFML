@@ -13,6 +13,7 @@ class Player
 
     std::vector<sf::RectangleShape> bullets;
     float bulletSpeed = 0.2f;
+    float PlayerSpeed = 2.0f;
     public:
     sf::Sprite sprite;
     Player() : sprite(texture) {};
@@ -20,6 +21,6 @@ class Player
     public:
     void Initialize(); //<-- Вызывается один раз за запуск приложения
     void Load();    //<-- called once per App start
-    void Update(Enemy& enemy);      //<-- Once per frame
+    void Update(float DeltaTime, Enemy& enemy);      //<-- Once per frame
     void Draw(sf::RenderWindow& window);    //<-- Once per frame
 };

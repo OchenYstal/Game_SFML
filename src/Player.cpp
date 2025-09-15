@@ -29,21 +29,21 @@ void Player::Load()
     sprite.setTextureRect(sf::IntRect({XIndex * size.x, YIndex * size.y}, {size.x, size.y}));  
     boundRectangle.setSize(sf::Vector2f (size.x * sprite.getScale().x, size.y * sprite.getScale().y));    
 }
-void Player::Update(Enemy& enemy)
+void Player::Update(float DeltaTime, Enemy& enemy)
 {
 sf::Vector2f position = sprite.getPosition();
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D))
-        sprite.setPosition(position + sf::Vector2f(0.5, 0));
+        sprite.setPosition(position + sf::Vector2f(0.5, 0) * PlayerSpeed * DeltaTime);
     
          if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A))
-        sprite.setPosition(position + sf::Vector2f(-0.5, 0));
+        sprite.setPosition(position + sf::Vector2f(-0.5, 0)* PlayerSpeed * DeltaTime);
 
          if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S))
-        sprite.setPosition(position + sf::Vector2f(0, 0.5));   
+        sprite.setPosition(position + sf::Vector2f(0, 0.5)* PlayerSpeed * DeltaTime);   
          
          if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W))
-        sprite.setPosition(position + sf::Vector2f(0, -0.5));
+        sprite.setPosition(position + sf::Vector2f(0, -0.5)* PlayerSpeed * DeltaTime);
 
 
 
@@ -58,7 +58,7 @@ sf::Vector2f position = sprite.getPosition();
          {
             sf::Vector2f bulletDirection = enemy.sprite.getPosition() - bullets[i].getPosition();
             bulletDirection = Math::Normolize(bulletDirection);
-            bullets[i].setPosition(bullets[i].getPosition() + bulletDirection * bulletSpeed);
+            bullets[i].setPosition(bullets[i].getPosition() + bulletDirection * bulletSpeed * DeltaTime);
          }
          boundRectangle.setPosition(sprite.getPosition());
 
