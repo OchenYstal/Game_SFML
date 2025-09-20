@@ -7,12 +7,16 @@ class FrameRate
 private:
     sf::Text FrameRateText;
     sf::Font font;
+
+    float timer;
 public:
-    FrameRate() : FrameRateText(font) {};
+   FrameRate() : FrameRateText(font) {};
 
  public:
-    void Initialize(); //<-- Вызывается один раз за запуск приложения
-    void Load();    //<-- called once per App start
-    void Update(float DeltaTime);      //<-- Once per frame
-    void Draw(sf::RenderWindow& window);    //<-- Once per frame
+    
+    
+    void Initialize(); 
+    void Load();     
+    void Update(float DeltaTime);      
+    void Draw(sf::RenderWindow& window);    
 };

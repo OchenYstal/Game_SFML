@@ -13,7 +13,7 @@ int main()
     FrameRate framerate;
     Player player;
     Enemy enemy;
-   
+    framerate.Initialize();
     enemy.Initialize();
     player.Initialize();
 
@@ -27,7 +27,7 @@ int main()
     while (window.isOpen())
     {
     sf::Time DeltaTimeTimer = clock.restart(); 
-    float DeltaTime = DeltaTimeTimer.asMilliseconds(); 
+    float DeltaTime = DeltaTimeTimer.asMicroseconds() / 1000.0; 
     
 
         //-------------- UPDATE ------------

@@ -1,11 +1,13 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include <string>
 
 #include "FrameRate.hpp"
 
+
 void FrameRate::Initialize()
 {
-
+    timer = 0;
 }
 void FrameRate::Load()
 {
@@ -17,10 +19,15 @@ void FrameRate::Load()
 }
 void FrameRate::Update(float DeltaTime)
 {
-    float fps = 1000 / DeltaTime;
+    timer += DeltaTime;
 
-    std::string frameRateText = "FPS: "  + std::to_string((int)fps) + " FrameTime: " + std::to_string((int)DeltaTime);
-    FrameRateText.setString(frameRateText);
+    if(timer > 100.0f)
+    {
+    float fps = 1000.0 / DeltaTime;
+    FrameRateText.setString("FPS: "  + std::to_string((int)fps) + " FrameTime: " + std::to_string((int)DeltaTime));
+    timer = 0;
+    }
+    
 }
 void FrameRate::Draw(sf::RenderWindow& window)
 {
