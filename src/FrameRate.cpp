@@ -5,9 +5,12 @@
 #include "FrameRate.hpp"
 
 
+FrameRate::~FrameRate()
+{
+    
+}
 void FrameRate::Initialize()
 {
-    timer = 0;
 }
 void FrameRate::Load()
 {

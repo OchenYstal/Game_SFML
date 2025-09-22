@@ -19,6 +19,7 @@ class Player
     Player() : sprite(texture) {};
 
     public:
+    Player(float timer); 
     void Initialize(); //<-- Вызывается один раз за запуск приложения
     void Load();    //<-- called once per App start
     void Update(float DeltaTime, Enemy& enemy);      //<-- Once per frame

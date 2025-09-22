@@ -9,12 +9,11 @@ private:
     sf::Font font;
 
     float timer;
-public:
-   FrameRate() : FrameRateText(font) {};
 
  public:
-    
-    
+ 
+    FrameRate() : timer(),  FrameRateText(font) {}
+    ~FrameRate();
     void Initialize(); 
     void Load();     
     void Update(float DeltaTime);      

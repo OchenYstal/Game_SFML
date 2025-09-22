@@ -8,7 +8,7 @@
 int main()
 {
     sf::RenderWindow window(sf::VideoMode({1920, 1080}), "SFML works!", sf::Style::Titlebar);
-    window.setFramerateLimit(60);
+    window.setFramerateLimit(1500);
 
     FrameRate framerate;
     Player player;
