@@ -7,12 +7,17 @@ class Enemy
     sf::Texture texture;
     sf::RectangleShape boundRectangle;
     sf::Vector2i size;
+    sf::Text HealtText;
+    sf::Font font;
 
+    
     public:  
     sf::Sprite sprite;
-    Enemy() : sprite(texture) {};
+    int Health;
     
     public:
+    Enemy() : sprite(texture), Health(100), HealtText(font) {};
+    void ChangeHealth(int hp);
     void Initialize(); //<-- Вызывается один раз за запуск приложения
     void Load();    //<-- called once per App start
     void Update(float DeltaTime);      //<-- Once per frame

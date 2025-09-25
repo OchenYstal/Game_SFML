@@ -1,7 +1,14 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include <string>
 #include "Enemy.hpp"
 
+void Enemy::ChangeHealth(int hp)
+{
+    Health += hp;
+    HealtText.setString(std::to_string(Health));
+
+}
 void Enemy::Initialize()
 {
      boundRectangle.setFillColor(sf::Color::Transparent);
@@ -12,6 +19,13 @@ void Enemy::Initialize()
 }
 void Enemy::Load()
 {
+    if(!font.openFromFile("assets/Fonts/Font1FPS.ttf"))
+    {
+        std::cout << "Failed to Load Font1FPS" << std::endl; 
+        
+        
+    }
+        HealtText.setFont(font);
     if (!texture.loadFromFile("assets/Enemy/Textures/enemySpriteSheet.png"))
     {
         std::cout << "Enemy Image Loaded!" << std::endl;
@@ -25,14 +39,18 @@ void Enemy::Load()
     sprite.setPosition(sf::Vector2f({200, 300}));
     sprite.setTextureRect(sf::IntRect({xIndex * size.x, yIndex * size.y}, {size.x, size.y}));
     boundRectangle.setSize(sf::Vector2f (size.x * sprite.getScale().x, size.y * sprite.getScale().y));  
+    
 }
 void Enemy::Update(float DeltaTime)
 {
     boundRectangle.setPosition(sprite.getPosition());
+
+    HealtText.setPosition(sprite.getPosition());
 
 }
 void Enemy::Draw(sf::RenderWindow& window)
 {
    window.draw(boundRectangle);
    window.draw(sprite);
+   window.draw(HealtText);
 }

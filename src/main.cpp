@@ -38,7 +38,7 @@ int main()
     }
     framerate.Update(DeltaTime);
     enemy.Update(DeltaTime);   
-    player.Update(DeltaTime,enemy);
+    player.Update(DeltaTime,enemy, window);
 
 //-------------- UPDATE ------------
 //-------------- DRAW ------------

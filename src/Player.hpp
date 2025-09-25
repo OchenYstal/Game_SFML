@@ -10,18 +10,21 @@ class Player
     sf::Texture texture;
     sf::RectangleShape boundRectangle;
     sf::Vector2i size;
-
+    sf::Vector2i globalMousePosition;
     std::vector<sf::RectangleShape> bullets;
-    float bulletSpeed = 0.2f;
-    float PlayerSpeed = 2.0f;
+    float bulletSpeed;
+    float PlayerSpeed;
+    float maxFireRate; 
+    float fireRateTimer;
     public:
     sf::Sprite sprite;
-    Player() : sprite(texture) {};
+   
 
     public:
-    Player(float timer); 
+    Player() : sprite(texture), bulletSpeed(0.2f), PlayerSpeed(2.0f), maxFireRate(500), fireRateTimer(0) {};
+
     void Initialize(); //<-- Вызывается один раз за запуск приложения
     void Load();    //<-- called once per App start
-    void Update(float DeltaTime, Enemy& enemy);      //<-- Once per frame
+    void Update(float DeltaTime, Enemy& enemy, sf::RenderWindow& window);      //<-- Once per frame
     void Draw(sf::RenderWindow& window);    //<-- Once per frame
 };
