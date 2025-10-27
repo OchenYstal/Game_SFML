@@ -7,7 +7,7 @@
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode({1920, 1080}), "SFML works!", sf::Style::Titlebar);
+    sf::RenderWindow window(sf::VideoMode({800, 600}), "SFML works!", sf::Style::Titlebar);
     window.setFramerateLimit(1500);
 
     FrameRate framerate;
@@ -36,9 +36,10 @@ int main()
             if (event->is<sf::Event::Closed>())
                 window.close();
     }
+    sf::Vector2f MousePosition = sf::Vector2f(sf::Mouse::getPosition(window));
     framerate.Update(DeltaTime);
     enemy.Update(DeltaTime);   
-    player.Update(DeltaTime,enemy, window);
+    player.Update(DeltaTime,enemy, MousePosition);
 
 //-------------- UPDATE ------------
 //-------------- DRAW ------------

@@ -3,6 +3,7 @@
 #include <SFML/Graphics/RectangleShape.hpp>
 #include <SFML/Graphics/RenderTexture.hpp>
 #include "Enemy.hpp"
+#include "Bullet.hpp"
 
 class Player
 {
@@ -10,9 +11,9 @@ class Player
     sf::Texture texture;
     sf::RectangleShape boundRectangle;
     sf::Vector2i size;
-    sf::Vector2i globalMousePosition;
-    std::vector<sf::RectangleShape> bullets;
-    float bulletSpeed;
+    
+    std::vector<Bullet> bullets;
+    
     float PlayerSpeed;
     float maxFireRate; 
     float fireRateTimer;
@@ -21,10 +22,10 @@ class Player
    
 
     public:
-    Player() : sprite(texture), bulletSpeed(0.2f), PlayerSpeed(2.0f), maxFireRate(500), fireRateTimer(0) {};
+    Player() : sprite(texture), PlayerSpeed(2.0f), maxFireRate(500), fireRateTimer(0) {};
 
     void Initialize(); //<-- Вызывается один раз за запуск приложения
     void Load();    //<-- called once per App start
-    void Update(float DeltaTime, Enemy& enemy, sf::RenderWindow& window);      //<-- Once per frame
+    void Update(float DeltaTime, Enemy& enemy, sf::Vector2f MousePosition);      //<-- Once per frame
     void Draw(sf::RenderWindow& window);    //<-- Once per frame
 };

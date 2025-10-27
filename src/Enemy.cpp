@@ -21,11 +21,9 @@ void Enemy::Load()
 {
     if(!font.openFromFile("assets/Fonts/Font1FPS.ttf"))
     {
-        std::cout << "Failed to Load Font1FPS" << std::endl; 
-        
-        
+        std::cout << "Failed to Load Font1FPS" << std::endl;    
     }
-        HealtText.setFont(font);
+    HealtText.setFont(font);
     if (!texture.loadFromFile("assets/Enemy/Textures/enemySpriteSheet.png"))
     {
         std::cout << "Enemy Image Loaded!" << std::endl;
@@ -50,7 +48,11 @@ void Enemy::Update(float DeltaTime)
 }
 void Enemy::Draw(sf::RenderWindow& window)
 {
-   window.draw(boundRectangle);
-   window.draw(sprite);
-   window.draw(HealtText);
+    if(Health > 0)
+    {
+    window.draw(boundRectangle);
+    window.draw(sprite);
+    window.draw(HealtText);
+    }
+   
 }

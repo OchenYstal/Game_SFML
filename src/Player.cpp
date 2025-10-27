@@ -30,7 +30,7 @@ void Player::Load()
     sprite.setTextureRect(sf::IntRect({XIndex * size.x, YIndex * size.y}, {size.x, size.y}));  
     boundRectangle.setSize(sf::Vector2f (size.x * sprite.getScale().x, size.y * sprite.getScale().y));    
 }
-void Player::Update(float DeltaTime, Enemy& enemy, sf::RenderWindow& window)
+void Player::Update(float DeltaTime, Enemy& enemy, sf::Vector2f MousePosition)
 {
     
 sf::Vector2f position = sprite.getPosition();
@@ -51,29 +51,27 @@ sf::Vector2f position = sprite.getPosition();
          fireRateTimer += DeltaTime;
          if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && fireRateTimer >= maxFireRate)
          {    
-            globalMousePosition = sf::Mouse::getPosition(window);
-            
-            bullets.push_back(sf::RectangleShape(sf::Vector2f({40.f, 20.f})));
-
+            bullets.push_back(Bullet());
             int i = bullets.size() - 1;
-            bullets[i].setPosition(sprite.getPosition()); 
-            
+            bullets[i].Initialize(sprite.getPosition(), MousePosition, 0.5f);            
             fireRateTimer = 0;
          }
-         sf::Vector2f WorldMousePos = window.mapPixelToCoords(globalMousePosition);
          for (size_t i = 0; i < bullets.size(); i++)
          {
             
-            sf::Vector2f bulletDirection = WorldMousePos - bullets[i].getPosition();
-            bulletDirection = Math::Normolize(bulletDirection);
-            bullets[i].setPosition(bullets[i].getPosition() + bulletDirection * bulletSpeed * DeltaTime);
-
+            //sf::Vector2f bulletDirection = MousePosition - bullets[i].getPosition();
+            //bulletDirection = Math::Normolize(bulletDirection);
+            //bullets[i].setPosition(bullets[i].getPosition() + bulletDirection * bulletSpeed * DeltaTime);
+            bullets[i].Update(DeltaTime);
+            if(enemy.Health > 0)
+            {
             if(Math::DidRectCollide(bullets[i].getGlobalBounds(), enemy.sprite.getGlobalBounds()))
             {
             enemy.ChangeHealth(-10);
             bullets.erase(bullets.begin() + i);
-            std::cout << "Enemy Health: " << enemy.Health << std::endl;
             }
+            }
+            
          }
          
          boundRectangle.setPosition(sprite.getPosition());
@@ -87,6 +85,6 @@ void Player::Draw(sf::RenderWindow& window)
 
     for (size_t i = 0; i < bullets.size(); i++)
         {
-            window.draw(bullets[i]);
+            bullets[i].Draw(window);
         }
 }
