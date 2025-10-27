@@ -5,7 +5,13 @@ set(CMAKE_CXX_STANDARD 17)
 
 find_package(SFML 3.0 COMPONENTS System Window Graphics Audio REQUIRED)
 
-add_executable(MyGame src/main.cpp)
+add_executable(MyGame src/main.cpp
+                      src/Player.cpp
+                      src/Enemy.cpp
+                      src/FrameRate.cpp
+                      src/Math.cpp
+                      src/Bullet.cpp
+                                  )
 
 target_link_libraries(MyGame PRIVATE sfml-system sfml-window sfml-graphics sfml-audio)
 

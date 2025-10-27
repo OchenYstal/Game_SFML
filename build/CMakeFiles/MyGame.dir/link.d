@@ -3,9 +3,11 @@ MyGame: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o \
   CMakeFiles/MyGame.dir/src/main.cpp.o \
-  CMakeFiles/MyGame.dir/src/Enemy.cpp.o \
-  CMakeFiles/MyGame.dir/src/Math.cpp.o \
   CMakeFiles/MyGame.dir/src/Player.cpp.o \
+  CMakeFiles/MyGame.dir/src/Enemy.cpp.o \
+  CMakeFiles/MyGame.dir/src/FrameRate.cpp.o \
+  CMakeFiles/MyGame.dir/src/Math.cpp.o \
+  CMakeFiles/MyGame.dir/src/Bullet.cpp.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libsfml-system.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libsfml-window.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libsfml-graphics.so \
@@ -66,21 +68,14 @@ MyGame: \
   /usr/lib/libbz2.so.1.0 \
   /usr/lib32/libpng16.so.16 \
   /usr/lib/libpng16.so.16 \
-  /usr/lib32/libharfbuzz.so.0 \
-  /usr/lib/libharfbuzz.so.0 \
   /usr/lib32/libbrotlidec.so.1 \
   /usr/lib/libbrotlidec.so.1 \
   /usr/lib32/libXau.so.6 \
   /usr/lib/libXau.so.6 \
   /usr/lib32/libXdmcp.so.6 \
   /usr/lib/libXdmcp.so.6 \
-  /usr/lib32/libglib-2.0.so.0 \
-  /usr/lib/libglib-2.0.so.0 \
-  /usr/lib/libgraphite2.so.3 \
   /usr/lib32/libbrotlicommon.so.1 \
-  /usr/lib/libbrotlicommon.so.1 \
-  /usr/lib32/libpcre2-8.so.0 \
-  /usr/lib/libpcre2-8.so.0
+  /usr/lib/libbrotlicommon.so.1
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o:
 
@@ -90,11 +85,15 @@ MyGame: \
 
 CMakeFiles/MyGame.dir/src/main.cpp.o:
 
+CMakeFiles/MyGame.dir/src/Player.cpp.o:
+
 CMakeFiles/MyGame.dir/src/Enemy.cpp.o:
+
+CMakeFiles/MyGame.dir/src/FrameRate.cpp.o:
 
 CMakeFiles/MyGame.dir/src/Math.cpp.o:
 
-CMakeFiles/MyGame.dir/src/Player.cpp.o:
+CMakeFiles/MyGame.dir/src/Bullet.cpp.o:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libsfml-system.so:
 
@@ -216,10 +215,6 @@ CMakeFiles/MyGame.dir/src/Player.cpp.o:
 
 /usr/lib/libpng16.so.16:
 
-/usr/lib32/libharfbuzz.so.0:
-
-/usr/lib/libharfbuzz.so.0:
-
 /usr/lib32/libbrotlidec.so.1:
 
 /usr/lib/libbrotlidec.so.1:
@@ -232,16 +227,6 @@ CMakeFiles/MyGame.dir/src/Player.cpp.o:
 
 /usr/lib/libXdmcp.so.6:
 
-/usr/lib32/libglib-2.0.so.0:
-
-/usr/lib/libglib-2.0.so.0:
-
-/usr/lib/libgraphite2.so.3:
-
 /usr/lib32/libbrotlicommon.so.1:
 
 /usr/lib/libbrotlicommon.so.1:
-
-/usr/lib32/libpcre2-8.so.0:
-
-/usr/lib/libpcre2-8.so.0:
