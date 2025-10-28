@@ -4,6 +4,7 @@
 #include "FrameRate.hpp"
 #include "Player.hpp"
 #include "Enemy.hpp"
+#include "Map.hpp"
 
 int main()
 {
@@ -13,12 +14,14 @@ int main()
     FrameRate framerate;
     Player player;
     Enemy enemy;
+    Map nmap;
     framerate.Initialize();
     enemy.Initialize();
     player.Initialize();
 
     framerate.Load();
     player.Load();
+    nmap.Load();
     enemy.Load();
 
    
@@ -44,6 +47,7 @@ int main()
 //-------------- UPDATE ------------
 //-------------- DRAW ------------
         window.clear(); 
+        nmap.Draw(window);
         player.Draw(window);
         enemy.Draw(window);
         framerate.Draw(window);

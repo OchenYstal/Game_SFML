@@ -11,6 +11,7 @@ add_executable(MyGame src/main.cpp
                       src/FrameRate.cpp
                       src/Math.cpp
                       src/Bullet.cpp
+                      src/Map.cpp
                                   )
 
 target_link_libraries(MyGame PRIVATE sfml-system sfml-window sfml-graphics sfml-audio)

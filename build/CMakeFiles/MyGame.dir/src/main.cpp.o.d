@@ -274,4 +274,5 @@ CMakeFiles/MyGame.dir/src/main.cpp.o: /home/ystal/Game_SFML/src/main.cpp \
  /usr/include/c++/15.2.1/tr1/riemann_zeta.tcc \
  /home/ystal/Game_SFML/src/FrameRate.hpp \
  /home/ystal/Game_SFML/src/Player.hpp /home/ystal/Game_SFML/src/Enemy.hpp \
- /home/ystal/Game_SFML/src/Bullet.hpp
+ /home/ystal/Game_SFML/src/Bullet.hpp /home/ystal/Game_SFML/src/Map.hpp \
+ /home/ystal/Game_SFML/src/Tile.hpp

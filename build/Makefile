@@ -201,6 +201,30 @@ src/FrameRate.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyGame.dir/build.make CMakeFiles/MyGame.dir/src/FrameRate.cpp.s
 .PHONY : src/FrameRate.cpp.s
 
+src/Map.o: src/Map.cpp.o
+.PHONY : src/Map.o
+
+# target to build an object file
+src/Map.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyGame.dir/build.make CMakeFiles/MyGame.dir/src/Map.cpp.o
+.PHONY : src/Map.cpp.o
+
+src/Map.i: src/Map.cpp.i
+.PHONY : src/Map.i
+
+# target to preprocess a source file
+src/Map.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyGame.dir/build.make CMakeFiles/MyGame.dir/src/Map.cpp.i
+.PHONY : src/Map.cpp.i
+
+src/Map.s: src/Map.cpp.s
+.PHONY : src/Map.s
+
+# target to generate assembly for a file
+src/Map.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyGame.dir/build.make CMakeFiles/MyGame.dir/src/Map.cpp.s
+.PHONY : src/Map.cpp.s
+
 src/Math.o: src/Math.cpp.o
 .PHONY : src/Math.o
 
@@ -291,6 +315,9 @@ help:
 	@echo "... src/FrameRate.o"
 	@echo "... src/FrameRate.i"
 	@echo "... src/FrameRate.s"
+	@echo "... src/Map.o"
+	@echo "... src/Map.i"
+	@echo "... src/Map.s"
 	@echo "... src/Math.o"
 	@echo "... src/Math.i"
 	@echo "... src/Math.s"

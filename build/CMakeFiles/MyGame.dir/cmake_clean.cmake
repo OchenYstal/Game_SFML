@@ -6,6 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/MyGame.dir/src/Enemy.cpp.o.d"
   "CMakeFiles/MyGame.dir/src/FrameRate.cpp.o"
   "CMakeFiles/MyGame.dir/src/FrameRate.cpp.o.d"
+  "CMakeFiles/MyGame.dir/src/Map.cpp.o"
+  "CMakeFiles/MyGame.dir/src/Map.cpp.o.d"
   "CMakeFiles/MyGame.dir/src/Math.cpp.o"
   "CMakeFiles/MyGame.dir/src/Math.cpp.o.d"
   "CMakeFiles/MyGame.dir/src/Player.cpp.o"

@@ -41,9 +41,13 @@ void Enemy::Load()
 }
 void Enemy::Update(float DeltaTime)
 {
+    if(Health > 0)
+    {
     boundRectangle.setPosition(sprite.getPosition());
 
     HealtText.setPosition(sprite.getPosition());
+    }
+    
 
 }
 void Enemy::Draw(sf::RenderWindow& window)
