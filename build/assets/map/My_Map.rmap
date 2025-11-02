@@ -1,0 +1,10 @@
+[Map]
+version=1
+tilesheet=assets/map/MapSpritesheet.png
+name=TestMap
+tileWidth=16
+tileHeight=16
+scaleX=5
+scaleY=5
+dataLenght=6
+data=0, 1, 2, 16, 17, 18

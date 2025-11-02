@@ -275,4 +275,6 @@ CMakeFiles/MyGame.dir/src/main.cpp.o: /home/ystal/Game_SFML/src/main.cpp \
  /home/ystal/Game_SFML/src/FrameRate.hpp \
  /home/ystal/Game_SFML/src/Player.hpp /home/ystal/Game_SFML/src/Enemy.hpp \
  /home/ystal/Game_SFML/src/Bullet.hpp /home/ystal/Game_SFML/src/Map.hpp \
- /home/ystal/Game_SFML/src/Tile.hpp
+ /home/ystal/Game_SFML/src/Tile.hpp \
+ /home/ystal/Game_SFML/src/MapLoader.hpp /usr/include/c++/15.2.1/iostream \
+ /home/ystal/Game_SFML/src/MapDate.hpp

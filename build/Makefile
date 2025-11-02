@@ -225,6 +225,30 @@ src/Map.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyGame.dir/build.make CMakeFiles/MyGame.dir/src/Map.cpp.s
 .PHONY : src/Map.cpp.s
 
+src/MapLoader.o: src/MapLoader.cpp.o
+.PHONY : src/MapLoader.o
+
+# target to build an object file
+src/MapLoader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyGame.dir/build.make CMakeFiles/MyGame.dir/src/MapLoader.cpp.o
+.PHONY : src/MapLoader.cpp.o
+
+src/MapLoader.i: src/MapLoader.cpp.i
+.PHONY : src/MapLoader.i
+
+# target to preprocess a source file
+src/MapLoader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyGame.dir/build.make CMakeFiles/MyGame.dir/src/MapLoader.cpp.i
+.PHONY : src/MapLoader.cpp.i
+
+src/MapLoader.s: src/MapLoader.cpp.s
+.PHONY : src/MapLoader.s
+
+# target to generate assembly for a file
+src/MapLoader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyGame.dir/build.make CMakeFiles/MyGame.dir/src/MapLoader.cpp.s
+.PHONY : src/MapLoader.cpp.s
+
 src/Math.o: src/Math.cpp.o
 .PHONY : src/Math.o
 
@@ -318,6 +342,9 @@ help:
 	@echo "... src/Map.o"
 	@echo "... src/Map.i"
 	@echo "... src/Map.s"
+	@echo "... src/MapLoader.o"
+	@echo "... src/MapLoader.i"
+	@echo "... src/MapLoader.s"
 	@echo "... src/Math.o"
 	@echo "... src/Math.i"
 	@echo "... src/Math.s"
