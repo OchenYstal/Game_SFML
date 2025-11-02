@@ -1,7 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include "Map.hpp"
 
-
 Map::Map() {}
 Map::~Map() { delete[] tiles; }
 
@@ -11,10 +10,12 @@ void Map::Initialize()
 }
 void Map::Load()
 {
-    if(tileSheetTexture.loadFromFile("assets/Map/MapSpritesheet.png"))
+    
+    mapLoader.Load("assets/map/My_Map.rmap", md);
+    if(tileSheetTexture.loadFromFile(md.tilesheet))
     {
-    totalTilesX = tileSheetTexture.getSize().x / tileWidth;
-    totalTilesY = tileSheetTexture.getSize().y / tileHeight;
+    totalTilesX = tileSheetTexture.getSize().x / md.tileWidth;
+    totalTilesY = tileSheetTexture.getSize().y / md.tileHeight;
 
     totalTiles = totalTilesX * totalTilesY;
 
@@ -35,27 +36,28 @@ void Map::Load()
             int i = x + y * totalTilesX;
             
         tiles[i].id = i;
-        tiles[i].position = sf::Vector2i(x * tileWidth, y * tileHeight);
+        tiles[i].position = sf::Vector2i(x * md.tileWidth, y * md.tileHeight);
         }
     }
-    for (size_t y = 0; y < 2; y++)
+    for (size_t y = 0; y < mapHeight; y++)
     {
-        for(size_t x = 0; x < 3; x++)
+        for(size_t x = 0; x < mapWidth; x++)
         {
-            int i = x + y * 3;
+            int i = x + y * mapWidth;
             
-            int index = mapNumbers[i];
+            int index = md.data[i];
 
             mapSprites[i].setTexture(tileSheetTexture);
 
-   mapSprites[i].setTextureRect(sf::IntRect(
-    sf::Vector2i(tiles[index].position.x, tiles[index].position.y),
-    sf::Vector2i(tileWidth, tileHeight)));
-            mapSprites[i].setScale(sf::Vector2f(4, 4));
-            mapSprites[i].setPosition(sf::Vector2f(x * 16 * 5, 100 + y * 16 * 5));
+            mapSprites[i].setTextureRect(sf::IntRect(
+            sf::Vector2i(tiles[index].position.x, tiles[index].position.y),
+            sf::Vector2i(md.tileWidth, md.tileHeight)));
+               mapSprites[i].setScale(sf::Vector2f(5, 5));
+               mapSprites[i].setPosition(sf::Vector2f(x * md.tileWidth * md.scaleX, 100 + y * md.tileHeight * md.scaleY));
         }
     }
     }
+    
 }
 void Map::Update()
 {

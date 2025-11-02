@@ -1,6 +1,7 @@
 #pragma once
 #include "Tile.hpp"
-
+#include "MapLoader.hpp"
+#include "MapDate.hpp"
 #include <SFML/Graphics.hpp>
 
 class Map
@@ -10,17 +11,16 @@ class Map
 
     Tile* tiles;
 
+    MapLoader mapLoader;
+    MapDate md;
+
     int totalTiles;
-    int tileWidth = 16;
-    int tileHeight = 16;
 
     int totalTilesX;
     int totalTilesY;
 
-    int mapNumbers[6] = {
-        1, 1, 1,
-        5, 5, 5
-    };
+    int mapWidth = 3;
+    int mapHeight = 2;
 
     sf::Sprite* mapSprites = nullptr;
 

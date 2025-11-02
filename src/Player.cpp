@@ -71,7 +71,6 @@ sf::Vector2f position = sprite.getPosition();
             bullets.erase(bullets.begin() + i);
             }
             }
-            
          }
          
          boundRectangle.setPosition(sprite.getPosition());

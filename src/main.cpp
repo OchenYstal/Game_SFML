@@ -6,6 +6,7 @@
 #include "Enemy.hpp"
 #include "Map.hpp"
 
+#include "MapLoader.hpp"
 int main()
 {
     sf::RenderWindow window(sf::VideoMode({800, 600}), "SFML works!", sf::Style::Titlebar);
@@ -15,6 +16,10 @@ int main()
     Player player;
     Enemy enemy;
     Map nmap;
+    
+    MapLoader mapLoader;
+    MapDate md;
+    mapLoader.Load("assets/map/My_Map.rmap", md);
     framerate.Initialize();
     enemy.Initialize();
     player.Initialize();
@@ -24,7 +29,6 @@ int main()
     nmap.Load();
     enemy.Load();
 
-   
     sf::Clock clock;
 
     while (window.isOpen())
