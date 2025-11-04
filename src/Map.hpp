@@ -18,10 +18,7 @@ class Map
 
     int totalTilesX;
     int totalTilesY;
-
-    int mapWidth = 3;
-    int mapHeight = 2;
-
+    
     sf::Sprite* mapSprites = nullptr;
 
     public:

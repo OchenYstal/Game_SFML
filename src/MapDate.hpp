@@ -8,6 +8,9 @@ struct MapDate
     std::string tilesheet = "";
     std::string name = "";
     
+    int mapWidth = 0;
+    int mapHeight = 0;
+
     int tileWidth = 0;
     int tileHeight = 0;
 

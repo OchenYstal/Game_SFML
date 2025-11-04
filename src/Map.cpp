@@ -39,11 +39,11 @@ void Map::Load()
         tiles[i].position = sf::Vector2i(x * md.tileWidth, y * md.tileHeight);
         }
     }
-    for (size_t y = 0; y < mapHeight; y++)
+    for (size_t y = 0; y < md.mapHeight; y++)
     {
-        for(size_t x = 0; x < mapWidth; x++)
+        for(size_t x = 0; x < md.mapWidth; x++)
         {
-            int i = x + y * mapWidth;
+            int i = x + y * md.mapWidth;
             
             int index = md.data[i];
 

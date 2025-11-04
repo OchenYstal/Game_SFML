@@ -50,6 +50,14 @@ void MapLoader::Load(std::string filename, MapDate& mapData)
                  {
                  mapData.name = value;
                  }
+                 else if(varaible == "mapWidth")
+                 {
+                 mapData.mapWidth = std::stoi(value);
+                 }
+                 else if(varaible == "mapHeight")
+                 {
+                 mapData.mapHeight = std::stoi(value);
+                 }
                  else if(varaible == "tileWidth")
                  {
                  mapData.tileWidth = std::stoi(value);

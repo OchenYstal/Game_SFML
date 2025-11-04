@@ -17,9 +17,8 @@ int main()
     Enemy enemy;
     Map nmap;
     
-    MapLoader mapLoader;
-    MapDate md;
-    mapLoader.Load("assets/map/My_Map.rmap", md);
+    
+    
     framerate.Initialize();
     enemy.Initialize();
     player.Initialize();
